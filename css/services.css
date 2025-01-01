@@ -1,0 +1,246 @@
+/* Hizmetler Sayfası Stilleri */
+.services-page {
+    margin-top: 0;
+}
+
+.services-hero {
+    height: 400px;
+    margin-top: 0;
+    padding-top: 80px; /* Header yüksekliği kadar padding verdik */
+    margin-bottom: 40px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/services-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.services-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.services-hero-content h1 {
+    font-size: 3.5rem;
+}
+
+/* Mobil için özel ayarlar */
+@media (max-width: 768px) {
+    .services-hero {
+        height: 400px;
+        margin-top: 0;
+        padding-top: 60px; /* Mobil header yüksekliği kadar padding */
+    }
+}    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+.services-hero-content p {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.services-list {
+    padding: 80px 0;
+
+/* Mobil için özel ayarlar */
+@media (max-width: 768px) {
+    .services-hero {
+        margin-top: 60px; /* Mobil header yüksekliği kadar margin */
+        height: 400px; /* Yüksekliği koruyoruz */
+    }
+}    background: var(--gray-bg);
+}
+
+.service-item {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Mobil için özel ayarlar */
+@media (max-width: 768px) {
+    .services-page {
+        margin-top: 50px; /* Mobile özel üst boşluk */
+    }
+
+    .services-hero {
+        height: 200px; /* Mobile özel hero yüksekliği */
+    }
+
+    .services-hero-content h1 {
+        font-size: 2rem; /* Mobile özel başlık boyutu */
+    }
+
+    .services-hero-content p {
+        font-size: 1rem; /* Mobile özel metin boyutu */
+    }
+}
+
+/* Tablet için özel ayarlar */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-page {
+        margin-top: 55px;
+    }
+
+    .services-hero {
+        height: 250px;
+    }
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon i {
+    font-size: 40px;
+    color: var(--secondary-color);
+}
+
+.service-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-color);
+}
+
+.service-content ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .services-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .service-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .service-icon {
+        margin: 0 auto 20px;
+    }
+}
+
+/* Animasyonlar */
+.service-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasyon Gecikmeleri */
+.service-item:nth-child(1) { animation-delay: 0.2s; }
+.service-item:nth-child(2) { animation-delay: 0.4s; }
+.service-item:nth-child(3) { animation-delay: 0.6s; }
+.service-item:nth-child(4) { animation-delay: 0.8s; }
+    .cta-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      max-width: 700px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    .cta-text {
+      text-align: right;
+    }
+
+    .cta-text h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .cta-text p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .contact-cta {
+      background: var(--gray-bg);
+      padding: 20px 0;
+    }
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+    color: white;
+}
+
+.btn-whatsapp i {
+    font-size: 20px;
+}
